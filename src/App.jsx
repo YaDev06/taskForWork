@@ -1,10 +1,14 @@
-import React from 'react'
-
+import React from "react";
+import Navbar from "./layouts/Navbar";
+import Content from './layouts/Content';
+import Footer from "./layouts/Footer";
 
 export default function App() {
   return (
-    <h1 className="text-3xl font-bold underline text-center">
-      Hello world!
-    </h1>
-  )
+    <>
+      <Navbar />
+      <Content />
+      <Footer />
+    </>
+  );
 }

@@ -1,1 +1,8 @@
-{}
+{
+  "learningCenters": [
+    { "name": "Vali-Teach" },
+    { "name": "Life-Teach" },
+    { "name": "Pro Web" }
+  ],
+  "mentors": []
+}
