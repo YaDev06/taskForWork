@@ -3,6 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import Home from "../Pages/Home";
 import SidebarLeft from "../Components/SidebarLeft";
 import SidebarRight from "../Components/SidebarRight";
+import LC from "../Components/LC";
+import Mentors from "../Components/Mentors";
 
 export default function Content() {
   return (
@@ -12,7 +14,9 @@ export default function Content() {
         <SidebarLeft />
         <SidebarRight />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route index path="/" element={<Home />} />
+          <Route path="/LC/:id" element={<LC />} />
+          <Route path="/LC/:id/mentors" element={<Mentors />} />
         </Routes>
       </div>
     </>

@@ -1,8 +1,124 @@
 {
   "learningCenters": [
-    { "name": "Vali-Teach" },
-    { "name": "Life-Teach" },
-    { "name": "Pro Web" }
-  ],
-  "mentors": []
+    {
+      "id": 1,
+      "name": "Vali-Teach",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda quibusdam nemo neque cupiditate praesentium modi sed, sunt, atque officiis veritatis animi veniam incidunt eligendi obcaecati deleniti itaque vitae, quisquam optio., sunt, atque officiis veritatis animi veniam incidunt eligendi obcaecati deleniti itaque vitae, quisquam option.",
+      "logo": "https://yt3.ggpht.com/xYJtTBxGHG8ZGXamWjb9yFh59bc52fCby-Vwroj4XreEZnLROAbC8UXxBeV6EnNL7obBUIxq=s900-c-k-c0x00ffffff-no-rj",
+      "mentors": [
+        {
+          "id": 1,
+          "fullname": "William Anderson",
+          "image": "https://bootstrapmade.com/demo/templates/Mentor/assets/img/trainers/trainer-3.jpg",
+          "telegram": "https://t.me/YaDev0228",
+          "youtube": "https://www.youtube.com",
+          "instagram": "https://www.instagram.com"
+        },
+        {
+          "id": 2,
+          "fullname": "Sarah Jhonson",
+          "image": "https://bootstrapmade.com/demo/templates/Mentor/assets/img/trainers/trainer-2.jpg",
+          "telegram": "https://t.me/YaDev0228",
+          "youtube": "https://www.youtube.com",
+          "instagram": "https://www.instagram.com"
+        },
+        {
+          "id": 4,
+          "fullname": "Walter White",
+          "image": "https://bootstrapmade.com/demo/templates/Mentor/assets/img/trainers/trainer-1.jpg",
+          "telegram": "https://t.me/YaDev0228",
+          "youtube": "https://www.youtube.com",
+          "instagram": "https://www.instagram.com"
+        },
+        {
+          "id": 3,
+          "fullname": "Ilhomjon Safarov",
+          "image": "https://media-exp1.licdn.com/dms/image/C4D03AQF9NDlqscvCtg/profile-displayphoto-shrink_800_800/0/1581328852593?e=2147483647&v=beta&t=mbeLpmnRAmMpBK5LUzg58k8w7ndFyaZVKN6ygtXKpYA",
+          "telegram": "https://t.me/YaDev0228",
+          "youtube": "https://www.youtube.com",
+          "instagram": "https://www.instagram.com"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Life Tech",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda quibusdam nemo neque cupiditate praesentium modi sed, sunt, atque officiis veritatis animi veniam incidunt eligendi obcaecati deleniti itaque vitae, quisquam optio., sunt, atque officiis veritatis animi veniam incidunt eligendi obcaecati deleniti itaque vitae, quisquam option.",
+      "logo": "https://instantlogodesign.com/uploads/output/2020/05/01/5c2e51017bc179c37f2ac4c4fba5c781.jpg?t=1588303536",
+      "mentors": [
+        {
+          "id": 1,
+          "fullname": "William Anderson",
+          "image": "https://bootstrapmade.com/demo/templates/Mentor/assets/img/trainers/trainer-3.jpg",
+          "telegram": "https://t.me/YaDev0228",
+          "youtube": "https://www.youtube.com",
+          "instagram": "https://www.instagram.com"
+        },
+        {
+          "id": 2,
+          "fullname": "Sarah Jhonson",
+          "image": "https://bootstrapmade.com/demo/templates/Mentor/assets/img/trainers/trainer-2.jpg",
+          "telegram": "https://t.me/YaDev0228",
+          "youtube": "https://www.youtube.com",
+          "instagram": "https://www.instagram.com"
+        },
+        {
+          "id": 4,
+          "fullname": "Walter White",
+          "image": "https://bootstrapmade.com/demo/templates/Mentor/assets/img/trainers/trainer-1.jpg",
+          "telegram": "https://t.me/YaDev0228",
+          "youtube": "https://www.youtube.com",
+          "instagram": "https://www.instagram.com"
+        },
+        {
+          "id": 3,
+          "fullname": "Ilhomjon Safarov",
+          "image": "https://media-exp1.licdn.com/dms/image/C4D03AQF9NDlqscvCtg/profile-displayphoto-shrink_800_800/0/1581328852593?e=2147483647&v=beta&t=mbeLpmnRAmMpBK5LUzg58k8w7ndFyaZVKN6ygtXKpYA",
+          "telegram": "https://t.me/YaDev0228",
+          "youtube": "https://www.youtube.com",
+          "instagram": "https://www.instagram.com"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Billion Innovations Education",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda quibusdam nemo neque cupiditate praesentium modi sed, sunt, atque officiis veritatis animi veniam incidunt eligendi obcaecati deleniti itaque vitae, quisquam optio., sunt, atque officiis veritatis animi veniam incidunt eligendi obcaecati deleniti itaque vitae, quisquam option.",
+      "logo": "./public/innovations.png",
+      "mentors": [
+        {
+          "id": 1,
+          "fullname": "William Anderson",
+          "image": "https://bootstrapmade.com/demo/templates/Mentor/assets/img/trainers/trainer-3.jpg",
+          "telegram": "https://t.me/YaDev0228",
+          "youtube": "https://www.youtube.com",
+          "instagram": "https://www.instagram.com"
+        },
+        {
+          "id": 2,
+          "fullname": "Sarah Jhonson",
+          "image": "https://bootstrapmade.com/demo/templates/Mentor/assets/img/trainers/trainer-2.jpg",
+          "telegram": "https://t.me/YaDev0228",
+          "youtube": "https://www.youtube.com",
+          "instagram": "https://www.instagram.com"
+        },
+        {
+          "id": 4,
+          "fullname": "Walter White",
+          "image": "https://bootstrapmade.com/demo/templates/Mentor/assets/img/trainers/trainer-1.jpg",
+          "telegram": "https://t.me/YaDev0228",
+          "youtube": "https://www.youtube.com",
+          "instagram": "https://www.instagram.com"
+        },
+        {
+          "id": 3,
+          "fullname": "Ilhomjon Safarov",
+          "image": "https://media-exp1.licdn.com/dms/image/C4D03AQF9NDlqscvCtg/profile-displayphoto-shrink_800_800/0/1581328852593?e=2147483647&v=beta&t=mbeLpmnRAmMpBK5LUzg58k8w7ndFyaZVKN6ygtXKpYA",
+          "telegram": "https://t.me/YaDev0228",
+          "youtube": "https://www.youtube.com",
+          "instagram": "https://www.instagram.com"
+        }
+      ] 
+    }
+  ]
 }

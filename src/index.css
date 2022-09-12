@@ -5,3 +5,25 @@
 .content {
   width: 65vw;
 }
+
+.card {
+  animation: show 0.2s ease-in-out;
+}
+
+@keyframes show {
+  from {
+    left: -5%;
+    opacity: 0;
+  }
+  to {
+    left: 0%;
+    opacity: 1;
+  }
+}
+
+.grow1 {
+  transition: all 0.2s ease-in-out;
+}
+.grow1:hover {
+  transform: scale(1.15);
+}

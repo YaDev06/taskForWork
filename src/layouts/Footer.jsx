@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="p-4 mt-[100px] z-50 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
+    <footer className="p-4 w-4/6 mx-auto z-50 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
       <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
         © {new Date().getFullYear()}{" "}
         <a href="/" className="hover:underline">
