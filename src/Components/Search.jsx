@@ -1,18 +1,14 @@
 import React, { useState } from "react";
-// import Search from "./Search";
 
-export default function SidebarRight() {
+export default function Search() {
   const [search, setSearch] = useState("");
-  // console.log(search);
-  const pets = ['cat', 'dog', 'bat'];
-
-  // const test = () => pets.filter()
-
-
+  
+    const filterCourses = () => {
+        
+    }
 
   return (
-    <div className="fixed h-[85vh] w-3/12 right-0 border rounded-lg overflow-y-auto">
-      {/* <Search /> */}
+    <>
       <form>
         <label
           for-html="default-search"
@@ -46,7 +42,6 @@ export default function SidebarRight() {
             onChange={(e) => setSearch(e.target.value)}
             value={search}
             required
-            title="Biror narsa qidiring"
           />
           <button
             type="submit"
@@ -56,6 +51,9 @@ export default function SidebarRight() {
           </button>
         </div>
       </form>
-    </div>
+      <div>
+        
+      </div>
+    </>
   );
 }

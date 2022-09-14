@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.content {
-  width: 65vw;
-}
+
 
 .card {
   animation: show 0.2s ease-in-out;

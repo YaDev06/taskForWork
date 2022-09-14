@@ -1,5 +1,12 @@
-// import { configureStore } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
+import LCSlice from "./slices/LCSlice";
+import MentorsSlice from "./slices/MentorsSlice";
 
-// export default store = configureStore({
-
-// });
+export const store = configureStore({
+  reducer: {
+    LCSlice,
+    MentorsSlice,
+  },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
+  devTools: process.env.NODE_ENV !== "production",
+});

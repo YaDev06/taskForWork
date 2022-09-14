@@ -1,20 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "../api/axios";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllMentors } from "../redux/slices/MentorsSlice";
 
 export default function Mentors() {
-  const [mentors, setMentors] = useState({});
   const { id } = useParams();
 
+  const mentors = useSelector((state) => state.MentorsSlice.mentors);
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    axios.get(`learningCenters/${id}`).then(({ data }) => setMentors(data));
+    axios
+      .get(`database/${id}`)
+      .then(({ data }) => dispatch(getAllMentors(data)));
   }, []);
 
   const LCMentors = mentors.mentors;
+
   return (
-    <div className="min-h-[76vh]">
+    <div className="min-h-[76vh] lg:w-3/6 md:w-3/6 sm:5/6 m-auto">
       <h3 className="text-2xl text-center font-semibold mt-[20px]">
-        {mentors.name} o'quv markazi mentorlari
+        {mentors.LC} o'quv markazi mentorlari
       </h3>
 
       <div className="flex flex-wrap text-center">
@@ -22,11 +29,11 @@ export default function Mentors() {
           ? LCMentors.map((mentor) => (
               <div
                 key={mentor.id}
-                className="group max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 ml-[5rem] mt-[3rem]"
+                className="group max-w-sm bg-white w-[20rem] rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-auto mt-[3rem]"
               >
                 <div className="relative overflow-hidden">
                   <img
-                    className="rounded-t-lg h-[25rem] w-[25rem] grow1"
+                    className="rounded-t h-[20rem] w-[20rem] grow1"
                     src={mentor.image}
                     alt=""
                   />
