@@ -5,12 +5,15 @@ import LC from "../Pages/LC";
 import Mentors from "../Pages/Mentors";
 import SidebarLeft from "../Components/SidebarLeft";
 import SidebarRight from "../Components/SidebarRight";
+import { useSelector } from "react-redux";
 
 export default function Content() {
+  const modal = useSelector((state) => state.ModalSlice.modal);
+
   return (
     <>
-      <div className="w-full mx-auto">
-        <div className="h-[105px] w-full"></div>
+      <div className="w-full mx-auto bg-slate-200">
+        <div className="h-[105px] w-full "></div>
         <SidebarLeft />
         <SidebarRight />
         <Routes>

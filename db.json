@@ -10,6 +10,7 @@
         {
           "id": 1,
           "fullname": "William Anderson",
+          "expert": "Frontend",
           "image": "https://bootstrapmade.com/demo/templates/Mentor/assets/img/trainers/trainer-3.jpg",
           "telegram": "https://t.me/YaDev0228",
           "youtube": "https://www.youtube.com",
@@ -17,7 +18,8 @@
         },
         {
           "id": 2,
-          "fullname": "Sarah Jhonson",
+          "fullname": "Sarah Johnson",
+          "expert": "SMM",
           "image": "https://bootstrapmade.com/demo/templates/Mentor/assets/img/trainers/trainer-2.jpg",
           "telegram": "https://t.me/YaDev0228",
           "youtube": "https://www.youtube.com",
@@ -26,6 +28,7 @@
         {
           "id": 4,
           "fullname": "Walter White",
+          "expert": "Backend",
           "image": "https://bootstrapmade.com/demo/templates/Mentor/assets/img/trainers/trainer-1.jpg",
           "telegram": "https://t.me/YaDev0228",
           "youtube": "https://www.youtube.com",
@@ -34,6 +37,7 @@
         {
           "id": 3,
           "fullname": "Ilhomjon Safarov",
+          "expert": "Ingliz tili",
           "image": "https://media-exp1.licdn.com/dms/image/C4D03AQF9NDlqscvCtg/profile-displayphoto-shrink_800_800/0/1581328852593?e=2147483647&v=beta&t=mbeLpmnRAmMpBK5LUzg58k8w7ndFyaZVKN6ygtXKpYA",
           "telegram": "https://t.me/YaDev0228",
           "youtube": "https://www.youtube.com",
@@ -74,7 +78,7 @@
         },
         {
           "id": 2,
-          "fullname": "Sarah Jhonson",
+          "fullname": "Sarah Johnson",
           "image": "https://bootstrapmade.com/demo/templates/Mentor/assets/img/trainers/trainer-2.jpg",
           "telegram": "https://t.me/YaDev0228",
           "youtube": "https://www.youtube.com",
@@ -128,7 +132,7 @@
         },
         {
           "id": 2,
-          "fullname": "Sarah Jhonson",
+          "fullname": "Sarah Johnson",
           "image": "https://bootstrapmade.com/demo/templates/Mentor/assets/img/trainers/trainer-2.jpg",
           "telegram": "https://t.me/YaDev0228",
           "youtube": "https://www.youtube.com",
@@ -179,7 +183,7 @@
         },
         {
           "id": 2,
-          "fullname": "Sarah Jhonson",
+          "fullname": "Sarah Johnson",
           "image": "https://bootstrapmade.com/demo/templates/Mentor/assets/img/trainers/trainer-2.jpg",
           "telegram": "https://t.me/YaDev0228",
           "youtube": "https://www.youtube.com",

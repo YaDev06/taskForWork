@@ -18,7 +18,7 @@ export default function LC() {
   }, []);
 
   return (
-    <div className="lg:w-3/6 m-auto flex flex-wrap">
+    <div className="lg:w-4/6 sm:w-5/6 m-auto flex flex-wrap">
       {aLCData.length > 0 ? (
         aLCData.map((LC) => (
           <div

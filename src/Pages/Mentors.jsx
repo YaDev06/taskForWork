@@ -19,9 +19,9 @@ export default function Mentors() {
   const LCMentors = mentors.mentors;
 
   return (
-    <div className="min-h-[76vh] lg:w-3/6 md:w-3/6 sm:5/6 m-auto">
+    <div className="min-h-[76vh] lg:w-8/12 md:w-3/6 sm:5/6 m-auto">
       <h3 className="text-2xl text-center font-semibold mt-[20px]">
-        {mentors.LC} o'quv markazi mentorlari
+        {`${mentors.LC} o'quv markazi mentorlari`}
       </h3>
 
       <div className="flex flex-wrap text-center">
@@ -29,11 +29,11 @@ export default function Mentors() {
           ? LCMentors.map((mentor) => (
               <div
                 key={mentor.id}
-                className="group max-w-sm bg-white w-[20rem] rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-auto mt-[3rem]"
+                className="group max-w-sm bg-white lg:w-[21.5rem] sm:w-[20rem] rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-auto mt-[3rem]"
               >
                 <div className="relative overflow-hidden">
                   <img
-                    className="rounded-t h-[20rem] w-[20rem] grow1"
+                    className="rounded-t lg:h-[21.5rem] lg:w-[21.5rem] sm:h-[20rem] sm:w-[20rem] grow1"
                     src={mentor.image}
                     alt=""
                   />
@@ -83,10 +83,13 @@ export default function Mentors() {
                   </div>
                 </div>
                 <div className="p-5">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white group-hover:italic">
+                  <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                     {mentor.fullname}
                   </h5>
-                  <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 italic">
+                  <p className="text-gray-800 italic">
+                    {mentor.expert} mentori
+                  </p>
+                  <p className="mb-3 font-normal text-gray-600 dark:text-gray-400 italic">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Harum inventore necessitatibus suscipit ducimus asperiores
                     veritatis.

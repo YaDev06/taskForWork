@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
-    <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 fixed w-full z-50">
+    <nav className="bg-white border-gray-200 px-2 sm:px-4 rounded dark:bg-gray-900 fixed w-full z-50">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <Link to="/" className="flex items-center">
           <img
@@ -76,6 +76,8 @@ export default function Navbar() {
           </ul>
         </div>
       </div>
+
+      <hr className="bg-slate-400" />
     </nav>
   );
 }

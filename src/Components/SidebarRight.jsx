@@ -1,61 +1,50 @@
 import React, { useState } from "react";
-// import Search from "./Search";
+import { useDispatch, useSelector } from "react-redux";
+import { changeModal } from "../redux/slices/ModalSlice";
+import Search from "./Search";
 
 export default function SidebarRight() {
-  const [search, setSearch] = useState("");
-  // console.log(search);
-  const pets = ['cat', 'dog', 'bat'];
-
-  // const test = () => pets.filter()
-
-
+  const dispatch = useDispatch();
+  const modal = useSelector((state) => state.ModalSlice.modal);
 
   return (
-    <div className="fixed h-[85vh] w-3/12 right-0 border rounded-lg overflow-y-auto">
-      {/* <Search /> */}
-      <form>
-        <label
-          for-html="default-search"
-          className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300"
-        >
-          Search
-        </label>
-        <div className="relative">
-          <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-            <svg
-              aria-hidden="true"
-              className="w-5 h-5 text-gray-500 dark:text-gray-400"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              ></path>
-            </svg>
-          </div>
-          <input
-            type="search"
-            id="default-search"
-            className="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Search . . ."
-            onChange={(e) => setSearch(e.target.value)}
-            value={search}
-            required
-            title="Biror narsa qidiring"
-          />
+    <div className="fixed bg-white h-[85vh] w-[20rem] right-0 border  rounded-lg overflow-y-auto">
+      {modal ? (
+        <>
+          <Search />
           <button
-            type="submit"
-            className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            onClick={() => dispatch(changeModal())}
+            className="focus:outline-none p-1.5 text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:ring-red-300 font-medium rounded-r rounded text-sm"
           >
-            Search
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              className="bi bi-x"
+              viewBox="0 0 16 16"
+            >
+              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+            </svg>
           </button>
-        </div>
-      </form>
+        </>
+      ) : (
+        <button
+          onClick={() => dispatch(changeModal())}
+          className="focus:outline-none p-1.5 text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:ring-red-300 font-medium rounded-r rounded text-sm"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            className="bi bi-search"
+            viewBox="0 0 16 16"
+          >
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg>
+        </button>
+      )}
     </div>
   );
 }
