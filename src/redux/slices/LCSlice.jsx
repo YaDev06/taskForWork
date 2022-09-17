@@ -25,20 +25,16 @@ const LCSlice = createSlice({
         };
       });
     },
-    // searchCourses: (state, { payload }) => {
-    //   const filter = state.courses.filter((val) => {
-    //     console.log(val);
-    //     if (payload == " ") {
-    //       return val;
-    //     } else if (
-    //       val.courses.itCourse.toLowerCase().includes(payload.toLowerCase()) ||
-    //       val.courses.english.toLowerCase().includes(payload.toLowerCase())
-    //     ) {
-    //       return val;
-    //     }
-    //   });
-    //     console.log(filter);
-    //   },
+    searchCourses: (state, { payload }) => {
+      state.courses = state.courses.filter((val) => {
+        if (
+          val.name.toLowerCase().includes(payload.toLowerCase()) ||
+          val.viloyat.toLowerCase().includes(payload.toLowerCase())
+        ) {
+          return val;
+        }
+      });
+    },
   },
 });
 export const { getAllLCs, getALC, getCourses, searchCourses } = LCSlice.actions;

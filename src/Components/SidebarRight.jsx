@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import Search from "./Search";
+// import Search from "./Search";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { getCourses, searchCourses } from "../redux/slices/LCSlice";
 import axios from "axios";
+
 export default function SidebarRight() {
   const courses = useSelector((state) => state.LCSlice.courses);
-  // console.log(courses);
   const [search, setSearch] = useState("");
   const dispatch = useDispatch();
+  console.log(courses);
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/database`).then(({ data }) => dispatch(getCourses(data)));
+    axios
+      .get(`http://localhost:3000/database`)
+      .then(({ data }) => dispatch(getCourses(data)));
   }, []);
 
   return (
@@ -21,7 +24,7 @@ export default function SidebarRight() {
         className="search w-full"
         onSubmit={(e) => {
           e.preventDefault();
-          getCourses();
+          dispatch(searchCourses(search));
         }}
       >
         <label
@@ -59,6 +62,7 @@ export default function SidebarRight() {
           />
           <button
             type="submit"
+            // onClick={() => dispatch(searchCourses(search))}
             className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5"
           >
             <svg
@@ -75,19 +79,12 @@ export default function SidebarRight() {
         </div>
       </form>
       <div className="mt-5">
-        {courses
-          .filter((val) => {
-            if (search == " ") {
-              return val;
-            } else if (
-              val.name.toLowerCase().includes(search.toLowerCase()) ||
-              val.viloyat.toLowerCase().includes(search.toLowerCase())
-            ) {
-              return val;
-            }
-          })
-          .map((items, idx) => (
-            <div className="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md mb-2 text-medium font-semibold tracking-tight text-gray-900">
+        {courses.length > 0 ? (
+          courses.map((items, idx) => (
+            <div
+              key={idx}
+              className="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md mb-2 text-medium font-semibold tracking-tight text-gray-900"
+            >
               <div className="flex justify-between">
                 <div className="flex">
                   <svg
@@ -154,7 +151,10 @@ export default function SidebarRight() {
                 </svg>
               </Link>
             </div>
-          ))}
+          ))
+        ) : (
+          <h3 className="text-center">Hech narsa topilmadi</h3>
+        )}
       </div>
     </div>
   );

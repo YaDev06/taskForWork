@@ -1,4 +1,5 @@
 {
+  "courses": [],
   "database": [
     {
       "id": 1,
@@ -42,6 +43,29 @@
           "telegram": "https://t.me/YaDev0228",
           "youtube": "https://www.youtube.com",
           "instagram": "https://www.instagram.com"
+        }
+      ],
+      "courses": [
+        {
+          "itCourse": "Komyputer savodxonligi"
+        },
+        {
+          "itCourse": "Dasturlash asoslari"
+        },
+        {
+          "itCourse": "Zamonaviy javascript"
+        },
+        {
+          "itCourse": "PHP va Laravel"
+        },
+        {
+          "itCourse": "React.js"
+        },
+        {
+          "english": "IELTS"
+        },
+        {
+          "english": "Ingliz tili"
         }
       ]
     },
