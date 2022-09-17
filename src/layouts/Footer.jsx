@@ -30,9 +30,9 @@ export default function Footer() {
             </svg>
             <span className="sr-only">Telegram page</span>
           </Link>
-          <Link
-            to="https://www.instagram.com"
-            target={"_blank"}
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
             className="text-gray-400 hover:text-gray-900 dark:hover:text-white"
           >
             <svg
@@ -48,7 +48,7 @@ export default function Footer() {
               />
             </svg>
             <span className="sr-only">Instagram page</span>
-          </Link>
+          </a>
         </div>
       </div>
     </footer>
