@@ -67,7 +67,7 @@ export default function LC() {
                 <Link
                   to={`/LC/${LC.id}/mentors`}
                   className="inline-flex mt-5 items-center py-2 px-3 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                  target="_blank"
+                  // target="_blank"
                   rel="noopener noreferrer"
                 >
                   Mentorlar
