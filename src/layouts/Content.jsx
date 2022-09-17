@@ -12,7 +12,7 @@ export default function Content() {
 
   return (
     <>
-      <div className="w-full mx-auto bg-slate-200">
+      <div className="w-full mx-auto bg-slate-200 relative">
         <div className="h-[105px] w-full "></div>
         <SidebarLeft />
         <SidebarRight />

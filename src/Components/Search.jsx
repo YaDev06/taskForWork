@@ -1,10 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { getCourses, searchCourses } from "../redux/slices/LCSlice";
+import axios from "../api/axios";
 
 export default function Search() {
   const [search, setSearch] = useState("");
+  const dispatch = useDispatch();
 
+  useEffect(() => {
+    axios.get(`database`).then(({ data }) => dispatch(getCourses(data)));
+  }, []);
   return (
-    <form>
+    <form
+      className="search w-full"
+      onSubmit={(e) => {
+        e.preventDefault();
+        dispatch(searchCourses(search));
+      }}
+    >
       <label
         for-html="default-search"
         className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300"
@@ -41,9 +54,18 @@ export default function Search() {
         />
         <button
           type="submit"
-          className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5"
         >
-          Search
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            className="bi bi-search"
+            viewBox="0 0 16 16"
+          >
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg>
         </button>
       </div>
     </form>

@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 
+.search{
+  animation: show2 0.2s ease-in-out;
+}
 
 .card {
   animation: show 0.2s ease-in-out;
@@ -15,6 +18,18 @@
   }
   to {
     left: 0%;
+    opacity: 1;
+  }
+}
+
+
+@keyframes show2 {
+  from {
+    right: -10%;
+    opacity: 0;
+  }
+  to {
+    right: 0%;
     opacity: 1;
   }
 }

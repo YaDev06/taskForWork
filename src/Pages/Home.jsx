@@ -110,6 +110,7 @@ export default function Home() {
           </div>
         )}
       </div>
+      <marquee>IT Park</marquee>
     </div>
   );
 }

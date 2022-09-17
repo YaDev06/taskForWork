@@ -43,22 +43,6 @@
           "youtube": "https://www.youtube.com",
           "instagram": "https://www.instagram.com"
         }
-      ],
-      "courses": [
-        {
-          "it": {
-            "komyputer savodxonligi": "komyputer savodxonligi",
-            "dasturlash asoslari": "dasturlash asoslari",
-            "javascript": "javascript",
-            "reactjs": "reactjs",
-            "php": "php",
-            "laravel": "laravel"
-          },
-          "til": {
-            "ielts": "IELTS",
-            "ingliz tili": "ingliz tili"
-          }
-        }
       ]
     },
     {
@@ -103,15 +87,19 @@
       ],
       "courses": [
         {
-          "it": {
-            "komyputer savodxonligi": "komyputer savodxonligi",
-            "dasturlash asoslari": "dasturlash asoslari",
-            "javascript": "javascript"
-          },
-          "til": {
-            "ielts": "IELTS",
-            "ingliz tili": "ingliz tili"
-          }
+          "itCourse": "Komyputer savodxonligi"
+        },
+        {
+          "itCourse": "Dasturlash asoslari"
+        },
+        {
+          "itCourse": "Zamonaviy javascript"
+        },
+        {
+          "english": "IELTS"
+        },
+        {
+          "english": "ingliz tili"
         }
       ]
     },
@@ -157,12 +145,16 @@
       ],
       "courses": [
         {
-          "it": {
-            "dasturlash asoslari": "dasturlash asoslari",
-            "javascript": "javascript",
-            "php": "php"
-          },
-          "til": {}
+          "itCourse": "Dasturlash asoslari"
+        },
+        {
+          "itCourse": "Javascript"
+        },
+        {
+          "itCourse": "Python va DJango"
+        },
+        {
+          "itCourse": "PHP"
         }
       ]
     },
@@ -208,13 +200,15 @@
       ],
       "courses": [
         {
-          "it": {
-            "dasturlash asoslari": "dasturlash asoslari",
-            "javascript": "javascript",
-            "php": "php"
-          },
-          "til": {}
-        }
+          "itCourse": "Dasturlash asoslari"
+        },
+        {
+          "itCourse": "Javascript"
+        },
+        {
+          "itCourse": "PHP"
+        },
+        { "english": "IELTS 7+" }
       ]
     }
   ]

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function SidebarLeft() {
   return (
-    <div className="fixed bg-white h-[85vh] w-[20rem] left-0 border overflow-y-auto rounded-lg">
+    <div className="fixed bg-white h-[85vh] w-[20rem] left-0 border overflow-y-auto rounded-lg snap-mandatory">
       <h3 className="text-center text-2xl  w-5/6 mx-auto rounded-xl my-[3rem] font-extrabold tracking-tight leading-none text-gray-900">
         <mark className="text-white bg-blue-600 rounded py-3 px-[3rem]">
           T a n l o v l a r
