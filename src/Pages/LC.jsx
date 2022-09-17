@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import axios from "../api/axios";
+import axios from "axios";
 import { getALC } from "../redux/slices/LCSlice";
 import Loader from "../UI/Loader";
 
@@ -12,7 +12,7 @@ export default function LC() {
   const { viloyat } = useParams();
 
   useEffect(() => {
-    axios.get(`database`).then(({ data }) => {
+    axios.get(`http://localhost:3000/database`).then(({ data }) => {
       dispatch(getALC({ viloyat, data }));
     });
   }, []);

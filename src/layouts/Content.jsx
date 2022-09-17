@@ -5,10 +5,8 @@ import LC from "../Pages/LC";
 import Mentors from "../Pages/Mentors";
 import SidebarLeft from "../Components/SidebarLeft";
 import SidebarRight from "../Components/SidebarRight";
-import { useSelector } from "react-redux";
 
 export default function Content() {
-  const modal = useSelector((state) => state.ModalSlice.modal);
 
   return (
     <>

@@ -4,7 +4,7 @@ import Search from "./Search";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { getCourses, searchCourses } from "../redux/slices/LCSlice";
-import axios from "../api/axios";
+import axios from "axios";
 export default function SidebarRight() {
   const courses = useSelector((state) => state.LCSlice.courses);
   // console.log(courses);
@@ -12,7 +12,7 @@ export default function SidebarRight() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    axios.get(`database`).then(({ data }) => dispatch(getCourses(data)));
+    axios.get(`http://localhost:3000/database`).then(({ data }) => dispatch(getCourses(data)));
   }, []);
 
   return (

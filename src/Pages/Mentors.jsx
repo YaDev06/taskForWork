@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import axios from "../api/axios";
+import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllMentors } from "../redux/slices/MentorsSlice";
 
@@ -12,7 +12,7 @@ export default function Mentors() {
 
   useEffect(() => {
     axios
-      .get(`database/${id}`)
+      .get(`http://localhost:3000/database/${id}`)
       .then(({ data }) => dispatch(getAllMentors(data)));
   }, []);
 
