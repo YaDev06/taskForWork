@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="p-4 mx-auto lg:w-3/6 md:w-3/6 sm:w-full bg-white sm:p-6 dark:bg-gray-900">
+    <footer className="p-4 mx-auto lg:w-3/6 md:w-3/6 sm:w-full bg-white dark:bg-gray-900">
       <div className="sm:flex sm:items-center sm:justify-between">
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
           © {new Date().getFullYear()}{" "}

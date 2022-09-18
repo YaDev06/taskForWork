@@ -19,17 +19,17 @@ export default function Mentors() {
   const LCMentors = mentors.mentors;
 
   return (
-    <div className="min-h-[76vh] lg:w-8/12 md:w-3/6 sm:5/6 m-auto">
-      <h3 className="text-2xl text-center font-semibold mt-[20px]">
+    <div className="lg:w-8/12 md:w-3/6 sm:5/6 m-auto">
+      <h3 className="text-3xl text-center  font-semibold mt-[20px] w-full">
         {`${mentors.LC} o'quv markazi mentorlari`}
       </h3>
 
-      <div className="flex flex-wrap text-center">
+      <div className="flex flex-wrap text-center min-h-[76vh]">
         {LCMentors
           ? LCMentors.map((mentor) => (
               <div
                 key={mentor.id}
-                className="group max-w-sm bg-white lg:w-[21.5rem] sm:w-[20rem] rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-auto mt-[3rem]"
+                className="group max-w-sm mb-10 bg-white lg:w-[21.5rem] sm:w-[20rem] rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-auto mt-[3rem]"
               >
                 <div className="relative overflow-hidden">
                   <img

@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   LCs: [],
   ALC: [],
+  fakeCourses: [],
   courses: [],
 };
 
@@ -24,12 +25,21 @@ const LCSlice = createSlice({
           courses: items.courses,
         };
       });
+      state.fakeCourses = payload.map((items) => {
+        return {
+          viloyat: items.viloyat,
+          name: items.name,
+          courses: items.courses,
+        };
+      });
     },
     searchCourses: (state, { payload }) => {
-      state.courses = state.courses.filter((val) => {
+      state.courses = state.fakeCourses.filter((val) => {
         if (
           val.name.toLowerCase().includes(payload.toLowerCase()) ||
           val.viloyat.toLowerCase().includes(payload.toLowerCase())
+          // val.itCourse.toLowerCase().includes(payload.toLowerCase()) ||
+          // val.english.toLowerCase().includes(payload.toLowerCase())
         ) {
           return val;
         }

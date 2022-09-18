@@ -54,9 +54,9 @@ export default function Home() {
   ];
   return (
     <div className="lg:w-7/12 sm:w-5/6 mx-auto bg-slate-200">
-      <div className="text-center w-2/6 py-5 mx-auto">
+      <div className="lg:w-2/6 md:w-2/6 sm:w-6/6 py-5 mx-auto text-center">
         <h3 className="text-2xl font-semibold">Viloyatlar</h3>
-        <hr className="mx-auto w-48 h-1 bg-gray-500 rounded border-0 md:my-3" />
+        <hr className="w-48 h-1 mx-auto bg-gray-500 rounded border-0 my-3 " />
       </div>
       <div className="z-50 min-h-[76vh] grid grid-flow-row auto-rows-max lg:grid-cols-2 sm:grid-cols-1 gap-y-5">
         {viloyatlar.length > 0 ? (
@@ -71,7 +71,7 @@ export default function Home() {
                     <h3 className="text-2xl font-semibold">
                       {viloyat.vil} viloyati
                     </h3>
-                    <p className="my-3 text-gray-500">
+                    <p className="my-3 text-gray-500 ">
                       {viloyat.length} ta o'quv markaz
                     </p>
                     <Link
@@ -110,7 +110,7 @@ export default function Home() {
           </div>
         )}
       </div>
-      <marquee>IT Park</marquee>
+      {/* <marquee>IT Park</marquee> */}
     </div>
   );
 }
