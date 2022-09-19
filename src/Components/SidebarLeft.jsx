@@ -1,37 +1,64 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { changeTanlovBar } from "../redux/slices/ModalSlice";
 
 export default function SidebarLeft() {
+  const dispatch = useDispatch();
+  const tanlovBar = useSelector((state) => state.ModalSlice.tanlovBar);
+  
   return (
     <>
       <button
-        // onClick={}
         data-collapse-toggle="default-SidebarLeft"
-        title="Open LeftBar"
+        onClick={() => dispatch(changeTanlovBar())}
+        title="Tanlovlar"
         type="button"
-        className="fixed z-50 left-0 p-2 ml-3 text-sm text-white rounded-full md:hidden bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-gray-200"
+        className={`fixed transition-all duration-500 ease-in z-30 ml-2 p-2 text-sm text-white rounded-full md:hidden bg-blue-500 ${
+          tanlovBar === false ? "sm:left-0" : "sm:left-[280px]"
+        }`}
         aria-controls="default-SidebarLeft"
         aria-expanded="false"
       >
-        <span className="sr-only">Open main menu</span>
-
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          aria-hidden="true"
-          height="16"
-          fill="currentColor"
-          className="bi bi-arrow-bar-right"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fillRule="evenodd"
-            d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8zm-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5z"
-          />
-        </svg>
+        {tanlovBar === false ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            aria-hidden="true"
+            height="16"
+            fill="currentColor"
+            className="bi bi-arrow-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fillRule="evenodd"
+              d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+            />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            aria-hidden="true"
+            height="16"
+            fill="currentColor"
+            className="bi bi-arrow-left"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+            />
+          </svg>
+        )}
       </button>
-      <div className="sm:hidden md:block lg:block" id="default-SidebarLeft">
-        <div className="fixed bg-white h-[85vh] w-[20rem] left-0 border overflow-y-auto rounded-lg snap-mandatory">
+      <div
+        className={`absolute transition-all duration-500 ease-in ${
+          tanlovBar === false ? "sm:left-[-20rem] lg:left-0" : "sm:left-0"
+        }`}
+        id="default-SidebarLeft"
+      >
+        <div className="fixed bg-white lg:h-[85vh] sm:h-[80vh] w-[20rem] border overflow-y-auto rounded-lg snap-mandatory">
           <h3 className="text-center text-2xl  w-5/6 mx-auto rounded-xl my-[3rem] font-extrabold tracking-tight leading-none text-gray-900">
             <mark className="text-white bg-blue-600 rounded py-3 px-[3rem]">
               T a n l o v l a r

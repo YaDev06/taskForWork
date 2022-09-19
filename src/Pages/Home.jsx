@@ -58,13 +58,13 @@ export default function Home() {
         <h3 className="text-2xl font-semibold">Viloyatlar</h3>
         <hr className="w-48 h-1 mx-auto bg-gray-500 rounded border-0 my-3 " />
       </div>
-      <div className="z-50 min-h-[76vh] grid grid-flow-row auto-rows-max lg:grid-cols-2 sm:grid-cols-1 gap-y-5">
+      <div className="min-h-[76vh] grid grid-flow-row auto-rows-max lg:grid-cols-2 sm:grid-cols-1 gap-y-5">
         {viloyatlar.length > 0 ? (
           viloyatlar.map((viloyat, idx) => {
             if (viloyat.length > 0) {
               return (
                 <div
-                  className="w-11/12 mx-auto h-[25.5vh] border shadow-lg shadow-current-500/50 py-5 rounded-lg bg-white"
+                  className="w-11/12 mx-auto sm:h-[20vh] lg:h-[25.5vh] border shadow-lg shadow-current-500/50 py-5 rounded-lg bg-white"
                   key={idx}
                 >
                   <div className="text-center">
@@ -76,13 +76,11 @@ export default function Home() {
                     </p>
                     <Link
                       to={`/LC/${viloyat.vil}`}
-                      className="relative hover:text px-5 inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600  dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800"
+                      className="hover:text px-5 inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 focus:ring-4 focus:outline-none focus:ring-green-200"
                       // target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <span className="relative text-white  py-2.5 transition-all ease-in duration-75 dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                        Batafsil
-                      </span>
+                      <span className="text-white py-2.5 ">Batafsil</span>
                       <svg
                         aria-hidden="true"
                         className="ml-2 -mr-1 w-4 h-4 text-white"
@@ -110,7 +108,6 @@ export default function Home() {
           </div>
         )}
       </div>
-      {/* <marquee>IT Park</marquee> */}
     </div>
   );
 }

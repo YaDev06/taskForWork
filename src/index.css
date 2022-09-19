@@ -2,14 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.search{
+.search {
   animation: show2 0.2s ease-in-out;
 }
 
 .card {
   animation: show 0.2s ease-in-out;
 }
+
+
 
 @keyframes show {
   from {
@@ -22,7 +23,6 @@
   }
 }
 
-
 @keyframes show2 {
   from {
     right: -10%;
@@ -33,6 +33,7 @@
     opacity: 1;
   }
 }
+
 
 .grow1 {
   transition: all 0.2s ease-in-out;

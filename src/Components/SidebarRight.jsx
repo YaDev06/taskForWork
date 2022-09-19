@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-// import Search from "./Search";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getCourses, searchCourses } from "../redux/slices/LCSlice";
 import axios from "axios";
+import { changeSearchBar } from "../redux/slices/ModalSlice";
 
 export default function SidebarRight() {
-  const courses = useSelector((state) => state.LCSlice.courses);
   const [search, setSearch] = useState("");
+  const courses = useSelector((state) => state.LCSlice.courses);
+  const searchBar = useSelector((state) => state.ModalSlice.searchBar);
   const dispatch = useDispatch();
-  // console.log(courses);
 
   useEffect(() => {
     axios
@@ -22,29 +21,51 @@ export default function SidebarRight() {
     <>
       <button
         data-collapse-toggle="default-SidebarRight"
+        onClick={() => dispatch(changeSearchBar())}
         type="button"
-        className="fixed z-50 right-2 p-2 ml-3 text-sm text-white rounded-full md:hidden bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-gray-200"
+        className={`fixed transition-all duration-500 ease-in z-20  p-2 mr-1 text-sm text-white rounded-full md:hidden ${
+          searchBar === false
+            ? "sm:right-2 bg-blue-500 hover:bg-blue-600 focus:outline-none"
+            : "sm:right-80 bg-red-600 focus:outline-none"
+        }`}
         aria-controls="default-SidebarRight"
         aria-expanded="false"
       >
-        <span className="sr-only">Open main menu</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          aria-hidden="true"
-          height="16"
-          fill="currentColor"
-          className="bi bi-search"
-          viewBox="0 0 16 16"
-        >
-          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-        </svg>
+        {searchBar === false ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            aria-hidden="true"
+            height="16"
+            fill="currentColor"
+            className="bi bi-search"
+            viewBox="0 0 16 16"
+          >
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            aria-hidden="true"
+            height="16"
+            fill="currentColor"
+            className="bi bi-x-lg"
+            viewBox="0 0 16 16"
+          >
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+          </svg>
+        )}
       </button>
       <div
-        className="sm:hidden w-full md:block lg:block"
+        className={`absolute transition-all duration-500 ease-in ${
+          searchBar === false
+            ? "sm:right-0 lg:right-[20rem]"
+            : "sm:right-[20rem]"
+        }`}
         id="default-SidebarRight"
       >
-        <div className="fixed bg-white h-[85vh] w-[20rem] right-0 border rounded-lg overflow-y-auto">
+        <div className="fixed bg-white sm:h-[79vh] lg:h-[85vh] w-[20rem] border rounded-lg overflow-y-auto">
           <form
             className="search w-full"
             onSubmit={(e) => {
@@ -86,11 +107,7 @@ export default function SidebarRight() {
                 value={search}
                 required
               />
-              <button
-                type="submit"
-                // onClick={() => dispatch(searchCourses(search))}
-                className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5"
-              >
+              <button className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"

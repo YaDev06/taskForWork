@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function ALC() {
-  return (
-    <div>
-      ALC
-    </div>
-  )
+  return <div className="min-h-[76vh]">ALC</div>;
 }

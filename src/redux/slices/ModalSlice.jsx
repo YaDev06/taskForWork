@@ -2,12 +2,19 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const ModalSlice = createSlice({
   name: "Modal",
-  initialState: { modal: false },
+  initialState: { searchBar: false, navBar: false, tanlovBar: false },
   reducers: {
-    changeModal: (state) => {
-      state.modal = !state.modal;
+    changeSearchBar: (state) => {
+      state.searchBar = !state.searchBar;
+    },
+    changeNavBar: (state) => {
+      state.navBar = !state.navBar;
+    },
+    changeTanlovBar: (state) => {
+      state.tanlovBar = !state.tanlovBar;
     },
   },
 });
-export const { changeModal } = ModalSlice.actions;
+export const { changeSearchBar, changeNavBar, changeTanlovBar } =
+  ModalSlice.actions;
 export default ModalSlice.reducer;
