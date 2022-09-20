@@ -25,8 +25,8 @@ export default function SidebarRight() {
         type="button"
         className={`fixed transition-all duration-500 ease-in z-20  p-2 mr-1 text-sm text-white rounded-full md:hidden ${
           searchBar === false
-            ? "sm:right-2 bg-blue-500 hover:bg-blue-600 focus:outline-none"
-            : "sm:right-80 bg-red-600 focus:outline-none"
+            ? "sm:right-2 bg-purple-500 hover:bg-purple-600 focus:outline-none"
+            : "sm:right-[315px] bg-red-600 focus:outline-none"
         }`}
         aria-controls="default-SidebarRight"
         aria-expanded="false"

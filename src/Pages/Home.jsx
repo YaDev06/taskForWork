@@ -64,7 +64,7 @@ export default function Home() {
             if (viloyat.length > 0) {
               return (
                 <div
-                  className="w-11/12 mx-auto sm:h-[20vh] lg:h-[25.5vh] border shadow-lg shadow-current-500/50 py-5 rounded-lg bg-white"
+                  className="w-11/12 mx-auto border shadow-lg shadow-current-500/50 py-5 rounded-lg bg-white"
                   key={idx}
                 >
                   <div className="text-center">
@@ -76,7 +76,7 @@ export default function Home() {
                     </p>
                     <Link
                       to={`/LC/${viloyat.vil}`}
-                      className="hover:text px-5 inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 focus:ring-4 focus:outline-none focus:ring-green-200"
+                      className="hover:text px-5 inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 focus:ring-4 focus:outline-none"
                       // target="_blank"
                       rel="noopener noreferrer"
                     >

@@ -17,7 +17,7 @@ export default function Content() {
         <Routes>
           <Route index path="/" element={<Home />} />
           <Route path="/LC/:viloyat" element={<LC />} />
-          <Route path="/LC/:ALC" element={<ALC />} />
+          <Route path="/LC/:name/markaz" element={<ALC />} />
           <Route path="/LC/:id/mentors" element={<Mentors />} />
         </Routes>
       </div>

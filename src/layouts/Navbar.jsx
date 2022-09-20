@@ -36,26 +36,39 @@ export default function Navbar() {
           <div
             onClick={() => dispatch(changeNavBar())}
             className="text-lg absolute right-8 top-6 cursor-pointer md:hidden"
+            name={navBar ? "close" : "menu"}
           >
-            <svg
-              name={navBar ? "close" : "menu"}
-              xmlns="http://www.w3.org/2000/svg"
-              width="25"
-              height="25"
-              fill="currentColor"
-              className="bi bi-list"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fillRule="evenodd"
-                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-              />
-            </svg>
+            {navBar === false ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="currentColor"
+                className="bi bi-list"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                className="bi bi-x-lg text-red-700"
+                viewBox="0 0 16 16"
+              >
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+              </svg>
+            )}
           </div>
 
           <ul
             className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-[60%] top-[4rem] md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
-              navBar ? "left-0 " : "left-[-400px]"
+              navBar ? "top-0 " : "top-[-250px]"
             }`}
           >
             {Links.map((link) => (

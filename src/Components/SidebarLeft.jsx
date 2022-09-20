@@ -6,7 +6,7 @@ import { changeTanlovBar } from "../redux/slices/ModalSlice";
 export default function SidebarLeft() {
   const dispatch = useDispatch();
   const tanlovBar = useSelector((state) => state.ModalSlice.tanlovBar);
-  
+
   return (
     <>
       <button
@@ -14,7 +14,7 @@ export default function SidebarLeft() {
         onClick={() => dispatch(changeTanlovBar())}
         title="Tanlovlar"
         type="button"
-        className={`fixed transition-all duration-500 ease-in z-30 ml-2 p-2 text-sm text-white rounded-full md:hidden bg-blue-500 ${
+        className={`fixed transition-all duration-500 ease-in z-30 ml-2 p-2 text-sm rounded-full md:hidden text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium text-center ${
           tanlovBar === false ? "sm:left-0" : "sm:left-[280px]"
         }`}
         aria-controls="default-SidebarLeft"
@@ -46,7 +46,7 @@ export default function SidebarLeft() {
             viewBox="0 0 16 16"
           >
             <path
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
             />
           </svg>
@@ -116,7 +116,7 @@ export default function SidebarLeft() {
               elit. Delectus aperiam eius.
             </p>
             <Link
-              to="/LC/Farg'ona"
+              to={`/LC/Vali-Teach/markaz`}
               className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 "
             >
               Qatnashish
@@ -174,7 +174,7 @@ export default function SidebarLeft() {
               elit. Delectus aperiam eius.
             </p>
             <Link
-              to="/LC/Toshkent"
+              to="/LC/Proweb/markaz"
               className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 "
             >
               Qatnashish
@@ -232,7 +232,7 @@ export default function SidebarLeft() {
               aperiam eius.
             </p>
             <Link
-              to="/LC/Farg'ona"
+              to="/LC/Life Tech/markaz"
               className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 "
             >
               Qatnashish

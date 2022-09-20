@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   LCs: [],
   ALC: [],
+  RegionLCs: [],
   fakeCourses: [],
   courses: [],
 };
@@ -14,8 +15,10 @@ const LCSlice = createSlice({
     getAllLCs: (state, { payload }) => {
       state.LCs.push(payload);
     },
-    getALC: (state, { payload }) => {
-      state.ALC = payload.data.filter((s) => s.viloyat === payload.viloyat);
+    getRegionLCs: (state, { payload }) => {
+      state.RegionLCs = payload.data.filter(
+        (s) => s.viloyat === payload.viloyat
+      );
     },
     getCourses: (state, { payload }) => {
       state.courses = payload.map((items) => {
@@ -45,7 +48,11 @@ const LCSlice = createSlice({
         }
       });
     },
+    getALC: (state, { payload }) => {
+      state.ALC = payload;
+    },
   },
 });
-export const { getAllLCs, getALC, getCourses, searchCourses } = LCSlice.actions;
+export const { getAllLCs, getRegionLCs, getCourses, searchCourses, getALC } =
+  LCSlice.actions;
 export default LCSlice.reducer;
