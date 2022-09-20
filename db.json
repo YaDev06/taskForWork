@@ -1,5 +1,4 @@
 {
-  "courses": [],
   "database": [
     {
       "id": 1,
@@ -46,27 +45,13 @@
         }
       ],
       "courses": [
-        {
-          "itCourse": "Komyputer savodxonligi"
-        },
-        {
-          "itCourse": "Dasturlash asoslari"
-        },
-        {
-          "itCourse": "Zamonaviy javascript"
-        },
-        {
-          "itCourse": "PHP va Laravel"
-        },
-        {
-          "itCourse": "React.js"
-        },
-        {
-          "english": "IELTS 7+"
-        },
-        {
-          "english": "Ingliz tili"
-        }
+        "Komyputer savodxonligi",
+        "Dasturlash asoslari",
+        "Zamonaviy javascript",
+        "PHP va Laravel",
+        "React.js",
+        "IELTS 7+",
+        "Fundamental ingliz tili"
       ]
     },
     {
@@ -110,21 +95,11 @@
         }
       ],
       "courses": [
-        {
-          "itCourse": "Komyputer savodxonligi"
-        },
-        {
-          "itCourse": "Dasturlash asoslari"
-        },
-        {
-          "itCourse": "Zamonaviy javascript"
-        },
-        {
-          "english": "IELTS"
-        },
-        {
-          "english": "Fundamental ingliz tili"
-        }
+        "Komyputer savodxonligi",
+        "Dasturlash asoslari",
+        "Zamonaviy javascript",
+        "IELTS",
+        "Fundamental ingliz tili"
       ]
     },
     {
@@ -168,18 +143,10 @@
         }
       ],
       "courses": [
-        {
-          "itCourse": "Dasturlash asoslari"
-        },
-        {
-          "itCourse": "Javascript"
-        },
-        {
-          "itCourse": "Python va DJango"
-        },
-        {
-          "itCourse": "PHP"
-        }
+        "Dasturlash asoslari",
+        "Javascript",
+        "Python va DJango",
+        "PHP"
       ]
     },
     {
@@ -222,18 +189,7 @@
           "instagram": "https://www.instagram.com"
         }
       ],
-      "courses": [
-        {
-          "itCourse": "Dasturlash asoslari"
-        },
-        {
-          "itCourse": "Javascript"
-        },
-        {
-          "itCourse": "PHP"
-        },
-        { "english": "IELTS 7+" }
-      ]
+      "courses": ["Dasturlash asoslari", "Javascript", "PHP", "IELTS 7+"]
     }
   ]
 }

@@ -7,15 +7,20 @@ import { changeSearchBar } from "../redux/slices/ModalSlice";
 
 export default function SidebarRight() {
   const [search, setSearch] = useState("");
-  const courses = useSelector((state) => state.LCSlice.courses);
+  const { courses, fakeCourses } = useSelector((state) => state.LCSlice);
   const searchBar = useSelector((state) => state.ModalSlice.searchBar);
   const dispatch = useDispatch();
-
   useEffect(() => {
     axios
       .get(`http://localhost:3000/database`)
       .then(({ data }) => dispatch(getCourses(data)));
   }, []);
+
+  const getSearch = () => {
+    axios
+      .get(`http://localhost:3000/database?courses_like=${search}`)
+      .then(({ data }) => dispatch(searchCourses(data)));
+  };
 
   return (
     <>
@@ -70,7 +75,7 @@ export default function SidebarRight() {
             className="search w-full"
             onSubmit={(e) => {
               e.preventDefault();
-              dispatch(searchCourses(search));
+              getSearch();
               setSearch("");
             }}
           >
@@ -165,13 +170,9 @@ export default function SidebarRight() {
                       Kurslar:
                     </h2>
                     <ul className="space-y-1 max-w-md list-disc list-inside text-gray-500 dark:text-gray-400">
-                      {items.courses.slice(0, 7).map((item) => {
-                        if (item.itCourse) {
-                          return <li key={item.itCourse}>{item.itCourse}</li>;
-                        } else {
-                          return <li key={item.english}>{item.english}</li>;
-                        }
-                      })}
+                      {items.courses.slice(0, 7).map((item, idx) => (
+                        <li key={idx}>{item}</li>
+                      ))}
                     </ul>
                   </div>
                   <Link

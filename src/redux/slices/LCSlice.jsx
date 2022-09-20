@@ -4,7 +4,6 @@ const initialState = {
   LCs: [],
   ALC: [],
   RegionLCs: [],
-  fakeCourses: [],
   courses: [],
 };
 
@@ -28,25 +27,9 @@ const LCSlice = createSlice({
           courses: items.courses,
         };
       });
-      state.fakeCourses = payload.map((items) => {
-        return {
-          viloyat: items.viloyat,
-          name: items.name,
-          courses: items.courses,
-        };
-      });
     },
     searchCourses: (state, { payload }) => {
-      state.courses = state.fakeCourses.filter((val) => {
-        if (
-          val.name.toLowerCase().includes(payload.toLowerCase()) ||
-          val.viloyat.toLowerCase().includes(payload.toLowerCase())
-          // val.itCourse.toLowerCase().includes(payload.toLowerCase()) ||
-          // val.english.toLowerCase().includes(payload.toLowerCase())
-        ) {
-          return val;
-        }
-      });
+      state.courses = payload;
     },
     getALC: (state, { payload }) => {
       state.ALC = payload;
