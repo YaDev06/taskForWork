@@ -17,7 +17,7 @@ export default function ALC() {
   }, []);
 
   return (
-    <div className="lg:w-6/12bg-slate-200 min-h-[76vh]">
+    <div className="lg:w-6/12 m-auto bg-slate-200 min-h-[76vh]">
       {ALC.length > 0 ? (
         ALC.map((item) => (
           <div key={item.id} className="sm:mx-auto">
