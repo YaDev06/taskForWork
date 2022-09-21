@@ -7,7 +7,7 @@ import { changeSearchBar } from "../redux/slices/ModalSlice";
 
 export default function SidebarRight() {
   const [search, setSearch] = useState("");
-  const { courses, fakeCourses } = useSelector((state) => state.LCSlice);
+  const { courses } = useSelector((state) => state.LCSlice);
   const searchBar = useSelector((state) => state.ModalSlice.searchBar);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -28,7 +28,7 @@ export default function SidebarRight() {
         data-collapse-toggle="default-SidebarRight"
         onClick={() => dispatch(changeSearchBar())}
         type="button"
-        className={`fixed transition-all duration-500 ease-in z-20  p-2 mr-1 text-sm text-white rounded-full md:hidden ${
+        className={`fixed transition-all duration-500 ease-in z-50  p-2 mr-1 text-sm text-white rounded-full md:hidden ${
           searchBar === false
             ? "sm:right-2 bg-purple-500 hover:bg-purple-600 focus:outline-none"
             : "sm:right-[315px] bg-red-600 focus:outline-none"
@@ -63,7 +63,7 @@ export default function SidebarRight() {
         )}
       </button>
       <div
-        className={`absolute transition-all duration-500 ease-in ${
+        className={`absolute transition-all duration-500 z-50 ease-in ${
           searchBar === false
             ? "sm:right-0 lg:right-[20rem]"
             : "sm:right-[20rem]"
@@ -176,7 +176,8 @@ export default function SidebarRight() {
                     </ul>
                   </div>
                   <Link
-                    to="/"
+                    to={`/LC/${items.name}/markaz`}
+                    target={'_blank'}
                     className="inline-flex mt-4 items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
                   >
                     Ko'proq

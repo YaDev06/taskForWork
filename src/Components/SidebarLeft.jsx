@@ -14,7 +14,7 @@ export default function SidebarLeft() {
         onClick={() => dispatch(changeTanlovBar())}
         title="Tanlovlar"
         type="button"
-        className={`fixed transition-all duration-500 ease-in z-30 ml-2 p-2 text-sm rounded-full md:hidden text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium text-center ${
+        className={`fixed transition-all duration-500 ease-in z-50 ml-2 p-2 text-sm rounded-full md:hidden text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium text-center ${
           tanlovBar === false ? "sm:left-0" : "sm:left-[280px]"
         }`}
         aria-controls="default-SidebarLeft"
@@ -53,7 +53,7 @@ export default function SidebarLeft() {
         )}
       </button>
       <div
-        className={`absolute transition-all duration-500 ease-in ${
+        className={`absolute transition-all z-40 duration-500 ease-in ${
           tanlovBar === false ? "sm:left-[-20rem] lg:left-0" : "sm:left-0"
         }`}
         id="default-SidebarLeft"
@@ -117,6 +117,7 @@ export default function SidebarLeft() {
             </p>
             <Link
               to={`/LC/Vali-Teach/markaz`}
+              target={"_blank"}
               className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 "
             >
               Qatnashish
@@ -175,6 +176,7 @@ export default function SidebarLeft() {
             </p>
             <Link
               to="/LC/Proweb/markaz"
+              target={"_blank"}
               className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 "
             >
               Qatnashish
@@ -233,6 +235,7 @@ export default function SidebarLeft() {
             </p>
             <Link
               to="/LC/Life Tech/markaz"
+              target={"_blank"}
               className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 "
             >
               Qatnashish

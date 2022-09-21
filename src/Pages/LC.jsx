@@ -48,7 +48,11 @@ export default function LC() {
                     " ta Til yo'nalishlarida kurslar bor"}
               </p>
               <div className="flex justify-between">
-                <Link to={`/LC/${LC.name}/markaz`} className="text-white inline-flex mt-5 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-3 py-3 text-center">
+                <Link
+                  to={`/LC/${LC.name}/markaz`}
+                  target={"_blank"}
+                  className="text-white inline-flex mt-5 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-3 py-3 text-center"
+                >
                   Batafsil
                   <svg
                     aria-hidden="true"
@@ -67,7 +71,7 @@ export default function LC() {
                 <Link
                   to={`/LC/${LC.id}/mentors`}
                   className="inline-flex mt-5 items-center py-2 px-3 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                  // target="_blank"
+                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   Mentorlar
@@ -90,7 +94,9 @@ export default function LC() {
           </div>
         ))
       ) : (
+        <div className="text-center pt-[15rem] mx-auto">
         <Loader />
+        </div>
       )}
     </div>
   );

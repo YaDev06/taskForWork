@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import Loader from "../UI/Loader";
-
 export default function Home() {
   const viloyatlar = [
     {
@@ -58,8 +56,8 @@ export default function Home() {
         <h3 className="text-2xl font-semibold">Viloyatlar</h3>
         <hr className="w-48 h-1 mx-auto bg-gray-500 rounded border-0 my-3 " />
       </div>
-      <div className="min-h-[76vh] grid grid-flow-row auto-rows-max lg:grid-cols-2 sm:grid-cols-1 gap-y-5">
-        {viloyatlar.length > 0 ? (
+      <div className="lg:min-h-[64vh] sm:min-h-[62vh] grid grid-flow-row auto-rows-max lg:grid-cols-2 sm:grid-cols-1 gap-y-5">
+        {viloyatlar.length > 0 &&
           viloyatlar.map((viloyat, idx) => {
             if (viloyat.length > 0) {
               return (
@@ -77,7 +75,7 @@ export default function Home() {
                     <Link
                       to={`/LC/${viloyat.vil}`}
                       className="hover:text px-5 inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 focus:ring-4 focus:outline-none"
-                      // target="_blank"
+                      target="_blank"
                       rel="noopener noreferrer"
                     >
                       <span className="text-white py-2.5 ">Batafsil</span>
@@ -99,14 +97,7 @@ export default function Home() {
                 </div>
               );
             }
-          })
-        ) : (
-          <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-5 m-5">
-            <Loader />
-            <Loader />
-            <Loader />
-          </div>
-        )}
+          })}
       </div>
     </div>
   );
